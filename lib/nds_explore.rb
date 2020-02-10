@@ -10,11 +10,10 @@ def pretty_print_nds(nds)
 end
 
 def print_first_directors_movie_titles
-  pp directors_database
   outer_index = 0
   while outer_index < directors_database.length do
     inner_index = 0
-    while inner_index < directors_database[outer_index][:movies].length do
+    while inner_index < directors_database[outer_index][:movies][inner_index][:title].length do
       if directors_database[outer_index][:name] == "Stephen Spielberg"
         puts "#{directors_database[outer_index][:movies][inner_index][:title]}\n"
       end
